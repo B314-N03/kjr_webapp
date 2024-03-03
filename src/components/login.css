@@ -1,0 +1,11 @@
+
+.loginContainer{
+    width: 35%;
+    color: var(--white);
+    height: fit-content;
+    background-color: var(--darkgrey);
+    border-radius: 7px;
+    padding: 15px;
+}   
+
+

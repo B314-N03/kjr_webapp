@@ -1,13 +1,247 @@
-body {
+
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Condensed";
+  user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/*colors*/
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #090909;
+  --darkgrey: #222222;
+  --grey: #4b4b4b;
+  --lightgrey: #9b9b9b;
+  --blue: #0d6efd;
+  --red: #f20000;
+  --green: #4ab022;
+  --orange: #faab17;
+  --purple: #8b44fd;
+  --yellow: #fdfd44;
+}
+
+
+/*fontsizes*/
+:root {
+  --fs-small: 12px;
+  --fs-regular: 14px;
+  --fs-medium: 16px;
+  --fs-large: 18px;
+  --fs-big: 20px;
+  --fs-huge: 22px;
+  --fs-massive: 24px;
+  --fs-gigantic: 26px;
+  --fs-enormous: 30px;
+  --fs-humongous: 36px;
+  --fs-yourmum: 40px
+}
+
+
+/*1 Version smaller*/
+@media only screen and (max-height: 925px) {
+  :root {
+    --fs-small: 11px;
+    --fs-regular: 13px;
+    --fs-medium: 15px;
+    --fs-large: 17px;
+    --fs-big: 19px;
+    --fs-huge: 21px;
+    --fs-massive: 23px;
+    --fs-gigantic: 25px;
+    --fs-enormous: 27px;
+    --fs-humongous: 35px;
+    --fs-yourmum: 39px
+  }
+}
+
+/*2 Version smaller*/
+@media only screen and (max-height: 880px) {
+  :root {
+    --fs-small: 10px;
+    --fs-regular: 12px;
+    --fs-medium: 14px;
+    --fs-large: 16px;
+    --fs-big: 18px;
+    --fs-huge: 20px;
+    --fs-massive: 22px;
+    --fs-gigantic: 24px;
+    --fs-enormous: 26px;
+    --fs-humongous: 34px;
+    --fs-yourmum: 38px
+  }
+}
+
+/*3 Version smaller*/
+@media only screen and (max-height: 850px) {
+  :root {
+    --fs-small: 9px;
+    --fs-regular: 11px;
+    --fs-medium: 13px;
+    --fs-large: 15px;
+    --fs-big: 17px;
+    --fs-huge: 19px;
+    --fs-massive: 20px;
+    --fs-gigantic: 21px;
+    --fs-enormous: 22px;
+    --fs-humongous: 33px;
+    --fs-yourmum: 37px
+  }
+}
+
+/*4 Version smaller*/
+@media only screen and (max-height: 840px) {
+  :root {
+    --fs-small: 9px;
+    --fs-regular: 10px;
+    --fs-medium: 12px;
+    --fs-large: 14px;
+    --fs-big: 16px;
+    --fs-huge: 18px;
+    --fs-massive: 19px;
+    --fs-gigantic: 20px;
+    --fs-enormous: 21px;
+    --fs-humongous: 32px;
+    --fs-yourmum: 36px
+  }
+}
+
+:root {
+  --fs-small: 14px;
+  --fs-regular: 16px;
+  --fs-medium: 18px;
+  --fs-large: 20px;
+  --fs-big: 22px;
+  --fs-huge: 24px;
+  --fs-massive: 26px;
+  --fs-gigantic: 28px;
+  --fs-enormous: 32px;
+  --fs-humongous: 38px;
+  --fs-yourmum: 42px;
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-regular {
+  font-size: var(--fs-regular);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+.fs-big {
+  font-size: var(--fs-big);
+}
+
+.fs-huge {
+  font-size: var(--fs-huge);
+}
+
+.fs-massive {
+  font-size: var(--fs-massive);
+}
+
+.fs-gigantic {
+  font-size: var(--fs-gigantic);
+}
+
+.fs-enormous {
+  font-size: var(--fs-enormous);
+}
+
+.fs-humongous {
+  font-size: var(--fs-humongous);
+}
+
+.fs-yourmum {
+  font-size: var(--fs-yourmum);
+}
+
+/* General Classes used in the whole project */
+.contentFull{
+  width: 100vw;
+  height: 100vh;
+}
+
+.col-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.row-flex{
+  display: flex;
+}
+
+.flex-gap-1rem{
+  gap: 1rem;
+}
+.flex-gap-3rem{
+  gap: 3rem;
+}
+
+.flex-gap-05rem{
+  gap: .5rem;
+}
+
+.justify_center{
+  justify-content: center;
+}
+
+.align_center{
+  align-items: center;
+}
+
+.background-image-1{
+  background-image: url("/src/assets/images/bg-image-1.jpg");
+  background-size: cover; /* Adjust as needed */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+      
+.input{
+  height: 35px;
+  background-color: var(--lightgrey);
+  border: none;
+  color: var(--white);
+  border-radius: 7px;
+  padding: 0px 15px;
+}
+
+
+.white{
+  color: var(--white);
+}
+
+.button{
+  width: 50%;
+  background-color: var(--blue);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  max-width: 50%;
+  border-radius: 7px;
+}
+
+.hidePassw{
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 75%;
+  transform: translateY(-50%);
+}
+
+.input-container{
+  position: relative;
 }
